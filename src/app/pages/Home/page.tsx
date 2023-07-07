@@ -21,6 +21,7 @@ function Home(props: Props) {
       <p>Count: {count}</p>
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleDecrement}>Decrement</button>
+ 
     </>
   );
 }
