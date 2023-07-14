@@ -1,8 +1,15 @@
+import Navbar from "./components/Navbar/page";
+import Header from "./components/Header/page";
+import Sidebar from "./components/Sidebar/page";
+import Footer from "./components/Footer/page";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-    Hello
+    <main>
+    <Navbar/>
+    <Header/>
+    <Sidebar/>
+    <Footer/>
     </main>
   )
 }
