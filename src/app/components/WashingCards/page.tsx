@@ -15,24 +15,38 @@ interface PageProps {
     Familysize: string;
     item: string;
     reviews: string;
+    images: string;
   }>;
 }
 
 const Page: React.FC<PageProps> = ({ wash }) => {
   return (
     <main>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 bg-green-500 p-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
         {wash.map((item) => (
           <div
             key={item.id}
-            className="max-w-sm rounded overflow-hidden shadow-lg p-10 border-2 border-white-500"
+            className="max-w-sm rounded-lg overflow-hidden shadow-md  border-2 border-gray-300"
           >
-            <div className="px-6 py-4 text-center">
-              <div className="font-bold text-xl text-white mb-2">{item.name}</div>
-              <p className="text-white-700 text-white">Price: {item.price}</p>
-              <p className="text-white-700 text-white">Brand: {item.brand}</p>
-              <p className="text-white-700 text-white">Rating: {item.rating}</p>
-              {/* Add more data fields as needed */}
+            <div className="w-full relative pb-2/3">
+              <img
+                className="w-full h-full object-cover"
+                src={item.images}
+                alt={item.name}
+              />
+            </div>
+            <div className="px-4 py-2">
+              <div className="font-bold text-xl mb-2 ">{item.name}</div>
+              <div className="mb-4">
+                <span className="inline-block bg-green-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
+                  {item.rating}
+                </span>
+                <span className="text-sm text-gray-700 align-center">{item.reviews} reviews</span>
+              </div>
+              <div className="flex justify-between">
+                <p className="text-gray-700">Brand: {item.brand}</p>
+                <p className="text-green-500 font-bold">{item.price}</p>
+              </div>
             </div>
           </div>
         ))}
