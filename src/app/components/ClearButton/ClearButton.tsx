@@ -1,5 +1,3 @@
-import React from "react";
-
 interface Props {
     setMinValue: (value: number) => void;
     setMaxValue: (value: number) => void;
