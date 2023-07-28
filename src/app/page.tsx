@@ -2,8 +2,8 @@ import HomeCard from "./pages/Home/page";
 
 export default function Home() {
   return (
-    <main>
+    <div className="container mx-auto">
     <HomeCard/>
-    </main>
+    </div>
   )
 }

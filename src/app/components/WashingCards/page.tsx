@@ -35,17 +35,17 @@ const Page: React.FC<PageProps> = ({ wash }) => {
                 alt={item.name}
               />
             </div>
-            <div className="px-4 py-2">
+            <div className="px-2 py-2">
               <div className="font-bold text-xl mb-2 ">{item.name}</div>
               <div className="mb-4">
-                <span className="inline-block bg-green-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
+                <span className="inline-block bg-blue-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
                   {item.rating}
                 </span>
-                <span className="text-sm text-gray-700 align-center">{item.reviews} reviews</span>
+                <span className="text-sm text-gray-700 align-center">{item.reviews}</span>
               </div>
               <div className="flex justify-between">
                 <p className="text-gray-700">Brand: {item.brand}</p>
-                <p className="text-green-500 font-bold">{item.price}</p>
+                <p className="text-white-500 font-bold">{item.price}</p>
               </div>
             </div>
           </div>

@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 import WashingCards from "../../components/WashingCards/page";
 import CustomerRatingFilter from "../../components/CusomerRating/page";
 import RangeSlider from "@/app/components/RangeSlider/RangeSlider";
+import ClearButton from "@/app/components/ClearButton/ClearButton";
+import Navbar from "../../components/Navbar/page";
+import HeroSection from "@/app/components/HeroSection/HeroSection";
 import data from "../../utils/data.json";
 
 interface WashingData {
@@ -60,35 +63,48 @@ function Home(props: Props) {
     applyFilter();
   }, [selectedRatings, minValue, maxValue]);
 
-
-
   return (
     <>
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 p-2">
-  {/* Customer Rating Filter */}
-  <div className="sm:col-span-1 lg:col-span-1">
 
-  <div>
-      {/* Range slider component */}
-      <RangeSlider
-        minValue={minValue}
-        maxValue={maxValue}
-        setMinValue={setMinValue}
-        setMaxValue={setMaxValue}
-      />
-  </div>
-  
-    <CustomerRatingFilter
-      selectedRatings={selectedRatings}
-      setSelectedRatings={setSelectedRatings}
-    />
-  </div>
+       {/* Navbar Section */}
+        <Navbar />
 
-  {/* Washing Cards */}
-  <div className="sm:col-span-1 lg:col-span-5">
-    <WashingCards wash={washingData} />
-  </div>
-</div>
+      {/* Hero Section */}
+      <HeroSection />
+
+      <div className=" grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-4 p-2 mt-8">
+        <div className="max-w-sm rounded-lg overflow-hidden shadow-md  border-2 border-gray-300 p-4 sm:col-span-1 lg:col-span-2 ">
+          <h1 className="bold text-2xl mb-10">Filters</h1>
+
+          {/* Range slider component */}
+          <RangeSlider
+            minValue={minValue}
+            maxValue={maxValue}
+            setMinValue={setMinValue}
+            setMaxValue={setMaxValue}
+          />
+
+           {/* Customer Rating Filter */}
+          <CustomerRatingFilter
+            selectedRatings={selectedRatings}
+            setSelectedRatings={setSelectedRatings}
+          />
+
+
+          {/* Clear Filters button */}
+          <ClearButton
+            setMinValue={setMinValue}
+            setMaxValue={setMaxValue}
+            setSelectedRatings={setSelectedRatings}
+          />
+        </div>
+
+        {/* Washing Cards */}
+        <div className="sm:col-span-1 lg:col-span-4">
+          <WashingCards wash={washingData} />
+        </div>
+
+      </div>
 
 
     </>

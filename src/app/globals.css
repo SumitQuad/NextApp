@@ -1,3 +1,13 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
+
+/* styles/globals.css */
+.container {
+    max-width: 1280px; /* Set your desired max-width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem; /* Optionally add some padding */
+    padding-right: 1rem; /* Optionally add some padding */
+  }
+  
