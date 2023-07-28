@@ -1,4 +1,4 @@
-import React from "react";
+import Image from 'next/image'
 
 interface PageProps {
   wash: Array<{
@@ -29,14 +29,16 @@ const Page: React.FC<PageProps> = ({ wash }) => {
             className="max-w-sm rounded-lg overflow-hidden shadow-md  border-2 border-gray-300"
           >
             <div className="w-full relative pb-2/3">
-              <img
+              <Image
                 className="w-full h-full object-cover"
-                src={item.images}
+                width={500}
+                height={500}
+                src={`/${item.images}`} 
                 alt={item.name}
               />
             </div>
             <div className="px-2 py-2">
-              <div className="font-bold text-xl mb-2 ">{item.name}</div>
+              <div className="font-bold text-lg mb-2 ">{item.name}</div>
               <div className="mb-4">
                 <span className="inline-block bg-blue-500 rounded-full px-3 py-1 text-sm font-semibold text-white mr-2">
                   {item.rating}

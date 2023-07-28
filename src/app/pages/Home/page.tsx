@@ -1,11 +1,14 @@
 'use client';
 import React, { useState, useEffect } from "react";
 import WashingCards from "../../components/WashingCards/page";
-import CustomerRatingFilter from "../../components/CusomerRating/page";
-import RangeSlider from "@/app/components/RangeSlider/RangeSlider";
+import CustomerRatingFilter from "../../components/Filters/CusomerRating/page";
+import RangeSlider from "@/app/components/Filters/RangeSlider/RangeSlider";
 import ClearButton from "@/app/components/ClearButton/ClearButton";
 import Navbar from "../../components/Navbar/page";
 import HeroSection from "@/app/components/HeroSection/HeroSection";
+import Discount from "../../components/Filters/Discount/page";
+import Offers from "../../components/Filters/Offers/page";
+import Fuel from "../../components/Filters/Fuel/page";
 import data from "../../utils/data.json";
 
 interface WashingData {
@@ -89,6 +92,15 @@ function Home(props: Props) {
             selectedRatings={selectedRatings}
             setSelectedRatings={setSelectedRatings}
           />
+
+          {/* Discount Filter */}
+          <Discount/>
+
+          {/* Fuel Filter */}
+          <Fuel/>
+
+           {/* Offer Filter */}
+          <Offers/>
 
 
           {/* Clear Filters button */}

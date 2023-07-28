@@ -24,7 +24,7 @@ const CustomerRatingFilter: FC<CustomerRatingFilterProps> = ({
     };
 
     return (
-        <div className=" mt-8 ">
+        <div className=" mt-10 ">
             <h6 className="mb-2">Customer Rating</h6>
             {ratings.map((rating) => (
                 <div key={rating}>

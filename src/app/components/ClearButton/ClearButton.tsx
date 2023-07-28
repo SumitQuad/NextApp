@@ -18,7 +18,7 @@ const ClearButton: React.FC<Props> = ({
     };
 
     return (
-        <button className="border-2 border-blue-500 px-5 py-2 rounded-full mt-5" onClick={handleClearFilters}>
+        <button className="border-2 border-blue-500 px-5 py-2 rounded-full mt-10" onClick={handleClearFilters}>
             Clear Filters
         </button>
     );
