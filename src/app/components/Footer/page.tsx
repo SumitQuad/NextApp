@@ -5,9 +5,9 @@ function Page(props: Props) {
 
     return (
         <>
-            <footer className="bg-gray-900 text-white py-4 mt-20">
+            <footer className="bg-blue-900 text-white py-4 mt-20">
                 <div className="container mx-auto text-center">
-                    <p>&copy; {new Date().getFullYear()} Your Website Name. All rights reserved.</p>
+                    <h1 className="text-white text-2xl">CarHub</h1>
                 </div>
             </footer>
 

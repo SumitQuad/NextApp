@@ -9,6 +9,7 @@ import HeroSection from "@/app/components/HeroSection/HeroSection";
 import Discount from "../../components/Filters/Discount/page";
 import Offers from "../../components/Filters/Offers/page";
 import Fuel from "../../components/Filters/Fuel/page";
+import Footer from "../../components/Footer/page";
 import data from "../../utils/data.json";
 
 interface WashingData {
@@ -69,8 +70,8 @@ function Home(props: Props) {
   return (
     <>
 
-       {/* Navbar Section */}
-        <Navbar />
+      {/* Navbar Section */}
+      <Navbar />
 
       {/* Hero Section */}
       <HeroSection />
@@ -87,20 +88,20 @@ function Home(props: Props) {
             setMaxValue={setMaxValue}
           />
 
-           {/* Customer Rating Filter */}
+          {/* Customer Rating Filter */}
           <CustomerRatingFilter
             selectedRatings={selectedRatings}
             setSelectedRatings={setSelectedRatings}
           />
 
           {/* Discount Filter */}
-          <Discount/>
+          <Discount />
 
           {/* Fuel Filter */}
-          <Fuel/>
+          <Fuel />
 
-           {/* Offer Filter */}
-          <Offers/>
+          {/* Offer Filter */}
+          <Offers />
 
 
           {/* Clear Filters button */}
@@ -117,7 +118,8 @@ function Home(props: Props) {
         </div>
 
       </div>
-
+      {/* Footer */}
+      <Footer />
 
     </>
   );

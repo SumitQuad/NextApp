@@ -5,7 +5,7 @@ interface CustomerRatingFilterProps {
     setSelectedRatings: React.Dispatch<React.SetStateAction<string[]>>;
 }
 
-const Page: FC<CustomerRatingFilterProps> = ({
+const CustomerRatingFilter: FC<CustomerRatingFilterProps> = ({
     selectedRatings,
     setSelectedRatings,
 }) => {
@@ -45,4 +45,4 @@ const Page: FC<CustomerRatingFilterProps> = ({
     );
 };
 
-export default Page;
+export default CustomerRatingFilter;

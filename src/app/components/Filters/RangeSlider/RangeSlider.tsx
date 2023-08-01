@@ -51,12 +51,12 @@ const RangeSlider: React.FC<RangeSliderProps> = ({
     <div>
       <div className="range-clear" style={{ marginBottom: "20px" }}>
         {minValue !== 0 && maxValue !== 0 && (
-          <div className="button-container">
+          <div className="border-2 border-blue-500 px-2 py-2 inline-flex bg-blue-500 text-white">
             <button >
               {minValue} - {maxValue}
             </button>
             <button
-              className="close-button"
+              className="close-button text-white ml-2"
               onClick={() => {
                 setMinValue(0);
                 setMaxValue(500000);
